@@ -1,0 +1,36 @@
+.trainers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.trainer-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px;
+  background: var(--surface);
+}
+.trainer-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--surface-2);
+  color: var(--brass);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.trainer-card h3 { font-size: 1.15rem; margin-bottom: 6px; }
+.trainer-card p { color: var(--paper-dim); font-size: 0.9rem; line-height: 1.55; margin-top: 12px; }
+.trainer-exp {
+  margin-top: 16px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--moss);
+}
+
+@media (max-width: 900px) {
+  .trainers-grid { grid-template-columns: 1fr; }
+}

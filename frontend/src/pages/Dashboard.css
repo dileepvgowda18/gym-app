@@ -1,0 +1,99 @@
+.dash-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.dash-wide { grid-column: 1 / -1; }
+.dash-card { padding: 26px; }
+.dash-card h3 { font-size: 1.05rem; margin-bottom: 16px; }
+.dash-plan-name { font-family: var(--font-display); font-size: 1.4rem; text-transform: uppercase; margin-bottom: 10px; }
+
+.dash-booking-list { display: flex; flex-direction: column; gap: 12px; }
+.dash-booking-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+.dash-booking-list li:first-child { border-top: none; padding-top: 0; }
+.dash-booking-list strong { display: block; font-size: 0.95rem; }
+.dash-booking-list span { display: block; color: var(--paper-dim); font-size: 0.8rem; margin-top: 4px; }
+
+.dash-table { width: 100%; border-collapse: collapse; }
+.dash-table th {
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--paper-dim);
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+}
+.dash-table td {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.88rem;
+}
+
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.stat-card {
+  padding: 22px;
+  text-align: left;
+}
+.stat-card .stat-value {
+  font-family: var(--font-mono);
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--brass);
+}
+.stat-card .stat-label {
+  color: var(--paper-dim);
+  font-size: 0.78rem;
+  margin-top: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.admin-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--line);
+}
+.admin-tabs button {
+  background: none;
+  border: none;
+  color: var(--paper-dim);
+  padding: 10px 4px;
+  margin-right: 22px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-bottom: 2px solid transparent;
+}
+.admin-tabs button.active {
+  color: var(--paper);
+  border-bottom-color: var(--ember);
+}
+
+.admin-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+  padding: 20px;
+}
+.admin-form .full-row { grid-column: 1 / -1; }
+
+@media (max-width: 900px) {
+  .dash-grid { grid-template-columns: 1fr; }
+  .stat-row { grid-template-columns: repeat(2, 1fr); }
+}

@@ -1,0 +1,27 @@
+.auth-wrap {
+  min-height: calc(100vh - 76px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 28px;
+}
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 40px;
+}
+.auth-card h2 { margin-top: 10px; font-size: 1.6rem; margin-bottom: 26px; }
+.auth-switch {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 0.88rem;
+  color: var(--paper-dim);
+}
+.auth-switch a { color: var(--ember); font-weight: 600; }
+.auth-hint {
+  margin-top: 14px;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--paper-dim);
+}
