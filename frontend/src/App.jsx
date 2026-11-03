@@ -10,6 +10,9 @@ import Classes from "./pages/Classes";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
+import Attendance from "./pages/Attendance";
+import Workouts from "./pages/Workouts";
+import Appointments from "./pages/Appointments";
 import AdminDashboard from "./pages/AdminDashboard";
 import NotFound from "./pages/NotFound";
 
@@ -27,6 +30,15 @@ export default function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/dashboard" element={
             <ProtectedRoute roles={["member", "trainer"]}><Dashboard /></ProtectedRoute>
+          } />
+          <Route path="/attendance" element={
+            <ProtectedRoute roles={["member"]}><Attendance /></ProtectedRoute>
+          } />
+          <Route path="/workouts" element={
+            <ProtectedRoute roles={["member"]}><Workouts /></ProtectedRoute>
+          } />
+          <Route path="/appointments" element={
+            <ProtectedRoute roles={["member"]}><Appointments /></ProtectedRoute>
           } />
           <Route path="/admin" element={
             <ProtectedRoute roles={["admin"]}><AdminDashboard /></ProtectedRoute>

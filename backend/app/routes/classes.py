@@ -52,6 +52,8 @@ def update_class(class_id):
 @roles_required("admin")
 def delete_class(class_id):
     gym_class = GymClass.query.get_or_404(class_id)
+    if gym_class.bookings:
+        return jsonify({"error": "class has existing bookings and cannot be deleted"}), 409
     db.session.delete(gym_class)
     db.session.commit()
     return jsonify({"message": "class deleted"})

@@ -12,6 +12,8 @@ class Trainer(db.Model):
     years_experience = db.Column(db.Integer, default=0)
 
     classes = db.relationship("GymClass", backref="trainer", lazy=True)
+    appointments = db.relationship("TrainerAppointment", foreign_keys="TrainerAppointment.trainer_id", backref="trainer", lazy=True, cascade="all, delete-orphan")
+    workout_plans = db.relationship("WorkoutPlan", foreign_keys="WorkoutPlan.trainer_id", backref="trainer", lazy=True, cascade="all, delete-orphan")
 
     def to_dict(self):
         return {

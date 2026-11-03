@@ -20,9 +20,33 @@ export default function Navbar() {
           IRON<span>CORE</span>
         </Link>
         <nav className="nav-links">
-          <NavLink to="/plans">Plans</NavLink>
-          <NavLink to="/trainers">Trainers</NavLink>
-          <NavLink to="/classes">Classes</NavLink>
+          {user?.role === "member" && (
+            <>
+              <NavLink to="/attendance">Attendance</NavLink>
+              <NavLink to="/workouts">Workouts</NavLink>
+              <NavLink to="/appointments">Appointments</NavLink>
+            </>
+          )}
+          {user?.role === "trainer" && (
+            <>
+              <NavLink to="/appointments">Appointments</NavLink>
+              <NavLink to="/dashboard">Assigned Members</NavLink>
+            </>
+          )}
+          {user?.role === "admin" && (
+            <>
+              <NavLink to="/admin">Dashboard</NavLink>
+              <NavLink to="/trainers">Trainers</NavLink>
+              <NavLink to="/classes">Classes</NavLink>
+            </>
+          )}
+          {!user && (
+            <>
+              <NavLink to="/plans">Plans</NavLink>
+              <NavLink to="/trainers">Trainers</NavLink>
+              <NavLink to="/classes">Classes</NavLink>
+            </>
+          )}
         </nav>
         <div className="nav-actions">
           {user ? (

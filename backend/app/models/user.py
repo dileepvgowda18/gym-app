@@ -18,6 +18,10 @@ class User(db.Model):
     bookings = db.relationship("Booking", backref="user", lazy=True, cascade="all, delete-orphan")
     payments = db.relationship("Payment", backref="user", lazy=True, cascade="all, delete-orphan")
     trainer_profile = db.relationship("Trainer", backref="user", uselist=False, cascade="all, delete-orphan")
+    attendance_records = db.relationship("Attendance", foreign_keys="Attendance.member_id", backref="member", lazy=True, cascade="all, delete-orphan")
+    workout_sessions = db.relationship("WorkoutSession", foreign_keys="WorkoutSession.member_id", backref="member", lazy=True, cascade="all, delete-orphan")
+    workout_plans = db.relationship("WorkoutPlan", foreign_keys="WorkoutPlan.member_id", backref="member", lazy=True, cascade="all, delete-orphan")
+    member_appointments = db.relationship("TrainerAppointment", foreign_keys="TrainerAppointment.member_id", backref="member", lazy=True, cascade="all, delete-orphan")
 
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)

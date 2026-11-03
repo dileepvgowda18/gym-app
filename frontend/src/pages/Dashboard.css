@@ -92,8 +92,46 @@
   padding: 20px;
 }
 .admin-form .full-row { grid-column: 1 / -1; }
+.admin-form h3 { margin-bottom: 4px; }
+.admin-list-heading, .admin-filters, .admin-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.admin-list-heading {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.admin-list-heading h3 { margin-bottom: 0; }
+.admin-filters > label { min-width: 180px; }
+.admin-actions { flex-wrap: wrap; }
+.admin-actions .btn { padding: 9px 14px; font-size: 0.72rem; }
+.admin-table-wrap { width: 100%; overflow-x: auto; }
+.admin-table-wrap .dash-table { min-width: 560px; }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.admin-tabs button:focus-visible {
+  outline: 2px solid var(--ember);
+  outline-offset: 3px;
+}
 
 @media (max-width: 900px) {
   .dash-grid { grid-template-columns: 1fr; }
   .stat-row { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .admin-tabs { overflow-x: auto; }
+  .admin-tabs button { flex: 0 0 auto; margin-right: 10px; }
+  .admin-filters, .admin-filters > label { width: 100%; }
 }
