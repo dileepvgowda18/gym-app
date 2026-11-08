@@ -1,6 +1,6 @@
 # 🏋️ IronCore Gym – Gym Management System
 
-## 1. Project Introduction
+## 1.Project Introduction
 
 IronCore Gym is a full-stack gym management application for handling member accounts, membership plans, trainers, classes, bookings, simulated payments, attendance, workout logs, and trainer appointments.
 
