@@ -12,7 +12,7 @@ The application combines a React and Vite frontend with a Flask REST API, SQLAlc
 
 | Area | Implemented functionality |
 |---|---|
-| Members | Member registration and login; member dashboard with membership, confirmed class bookings, and payment history. |
+| Members | Member registration and login, member dashboard with membership, confirmed class bookings, and payment history. |
 | Memberships | Browse active plans and subscribe; admins can create, edit, and deactivate plans. |
 | Trainers | Browse trainer profiles; admins can create, edit, and remove trainer profiles. |
 | Classes | Browse class schedules and seat availability; admins and trainers can create or edit classes. |
