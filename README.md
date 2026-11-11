@@ -10,7 +10,7 @@ The application combines a React and Vite frontend with a Flask REST API, SQLAlc
 
 ## 2. Project Features
 
-| Area | Implemented functionality |
+| Area | Implemented  functionality |
 |---|---|
 | Members | Member registration and login, member dashboard with membership, confirmed class bookings, and payment history. |
 | Memberships | Browse active plans and subscribe; admins can create, edit, and deactivate plans. |
