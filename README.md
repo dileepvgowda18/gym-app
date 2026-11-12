@@ -2,7 +2,7 @@
 
 ## 1.Project Introduction
 
-IronCore Gym is a full-stack gym management application for handling member accounts, membership plans, trainers, classes, bookings, simulated payments, attendance, workout logs, and trainer appointments.
+IronCore Gym is a full-stack gym management application for handling member accounts, membership plans, trainers, classes, bookings, simulated payments, attendance, workout logs, and  trainer appointments.
 
 The application combines a React and Vite frontend with a Flask REST API, SQLAlchemy ORM, and PostgreSQL database.
 
